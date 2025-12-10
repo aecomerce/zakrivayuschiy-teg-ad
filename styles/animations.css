@@ -29,10 +29,10 @@
 
 
 .like-icon.is-liked .sparks {
-    animation: sparks-spawn 0.3s ease-in 0.3s 1;
+    animation: sparks-spawn 0.3s ease-in 0.3s 1; /* animation: {name} {duration} {timing-function} {delay} {iteration-count}; */
 }
 
 .like-icon.is-liked .heart {
-    transform-origin: center;
+    transform-origin: center; /* масштабирование от центра */
     animation: heart-scale 0.3s ease-in 0.1s 1;
 }
