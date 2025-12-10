@@ -32,7 +32,7 @@
   min-width: 320px;
   min-height: 100dvb;
   background-image: var(--image-bg-page);
-  background-attachment: fixed;
+  background-attachment: fixed; /* фиксированное фоновое изображение */
   margin: auto;
   font-variation-settings: "wght" var(--weight-font-main);
   color: var(--color-font-main);
@@ -83,15 +83,15 @@
 
 .content-card {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr; /* fr - доля от всего пространства */
   gap: 25px;
   padding: var(--padding-content-card);
 }
 
 .buttons-content {
-  align-self: end;
+  align-self: end; /* нижний край */
   display: grid;
-  grid-auto-flow: column;
+  grid-auto-flow: column; /* Располагает элементы по горизонтали (в колонки), а не по вертикали. */
   align-items: end;
   gap: 10px;
   justify-content: center;
@@ -111,7 +111,7 @@
 
 .wrapper-image {
   margin: 0 0 0 0;
-  position: relative;
+  position: relative; /* относительное позиционирование элемента */
   border-top: 2px black solid;
   border-bottom: 2px black solid;
   width: 100%;
@@ -121,8 +121,8 @@
 .image-card {
   height: 100%;
   width: 100%;
-  object-fit: cover;
-  object-position: right;
+  object-fit: cover; /* масштабирует изображение, чтобы заполнить весь контейнер, сохраняя пропорции */
+  object-position: right; /* выравнивает изображение по правому краю */
 }
 
 
@@ -174,7 +174,7 @@
           0 -1px var(--color-stroke-text);
 }
 
-@supports (-webkit-text-stroke: 1px var(--color-stroke-text)) {
+@supports (-webkit-text-stroke: 1px var(--color-stroke-text)) {   /* Стили применяются, если свойство поддерживается */
   .label-card {
     text-shadow: none;
     -webkit-text-stroke: 1px var(--color-stroke-text);
@@ -195,8 +195,8 @@
 .button__text {
   top: 1px;
   position: relative;
-  z-index: 1;
-  mix-blend-mode: difference;
+  z-index: 1; /* поднимает элемент над другими */
+  mix-blend-mode: difference; /* инвертирование цветов */
   color: white;
   line-height: 90%;
   display: inline;
@@ -209,7 +209,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  transform: scaleX(0);
+  transform: scaleX(0); /* 0% ширины (невидим) */
   background-color: black;
   transition: transform 0.5s ease-in-out;
   transform-origin: left;
@@ -217,7 +217,7 @@
 }
 
 .button:hover::after {
-  transform: scaleX(1);
+  transform: scaleX(1); /* исходный размер (100%) */
 }
 
 .card__icon-button {
